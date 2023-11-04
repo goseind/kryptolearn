@@ -8,35 +8,28 @@ import {
   ScrollView,
   StatusBar,
 } from 'react-native';
+import { extendedEuclid } from '../algorithms';
 
-const EuclideanAlgorithm = () => {
+const ExtendedEuclideanAlgorithm = () => {
   const [a, setA] = useState();
   const [b, setB] = useState();
   const [steps, setSteps] = useState([]);
-  const [result, setResult] = useState();
-
-  function Euclid(a: number, b: number) {
-    let stepsArray = [];
-    let i = 1;
-    while (b != 0) {
-      const r = a % b;
-      stepsArray.push(
-        `Schritt ${i}: ${a} = ${Math.floor(a / b)} * ${b} + ${r}`
-      );
-      a = b;
-      b = r;
-      i += 1;
-    }
-    setSteps(stepsArray);
-    return a;
-  }
+  const [result, setResult] = useState([]);
 
   function handleClick() {
-    setResult(Euclid(Number(a), Number(b)));
+    const calculations = extendedEuclid(Number(a), Number(b));
+    setResult(calculations);
+    setSteps(calculations.stepsArray);
   }
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text>
+        Der erweiterte euklidische Algorithmus kann zwei Zahlen x und y
+        berechnen, sodass ggt(a, b) = ax + by. Gib zwei natürliche Zahlen ein
+        und drücke auf berechnen, um dir die Schritte des Algorithmus zeigen zu
+        lassen.
+      </Text>
       <TextInput
         style={styles.input}
         onChangeText={setA}
@@ -49,7 +42,10 @@ const EuclideanAlgorithm = () => {
         placeholder="Nenne eine Zahl b"
         keyboardType="numeric"
       />
-      <Button onPress={handleClick} title="Berechne den ggT(a, b)" />
+      <Button
+        onPress={handleClick}
+        title="Berechne Zahlen x und y zu a und b"
+      />
       <ScrollView>
         <Text style={styles.output}>Schritte:</Text>
         {steps.map((step, index) => (
@@ -57,7 +53,10 @@ const EuclideanAlgorithm = () => {
             {step}
           </Text>
         ))}
-        <Text style={styles.output}>Der ggT(a, b) lautet: {result} </Text>
+        <Text style={styles.output}>
+          Der ggT(a, b) lautet: {result.a}, x ist: {result.x} und y ist:{' '}
+          {result.y}
+        </Text>
       </ScrollView>
     </SafeAreaView>
   );
@@ -79,4 +78,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default EuclideanAlgorithm;
+export default ExtendedEuclideanAlgorithm;
