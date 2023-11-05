@@ -19,7 +19,7 @@ function App() {
           options={{
             title: 'Willkommen bei Krypto Learn',
             headerStyle: {
-              backgroundColor: '#4C5866',
+              backgroundColor: '#586576',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -33,7 +33,7 @@ function App() {
           options={{
             title: 'Euklidischer Algorithmus',
             headerStyle: {
-              backgroundColor: '#4C5866',
+              backgroundColor: '#586576',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -47,7 +47,7 @@ function App() {
           options={{
             title: 'Erweiterter Euklidischer Algorithmus',
             headerStyle: {
-              backgroundColor: '#4C5866',
+              backgroundColor: '#586576',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
@@ -61,7 +61,7 @@ function App() {
           options={{
             title: 'Chinesischer Restsatz',
             headerStyle: {
-              backgroundColor: '#4C5866',
+              backgroundColor: '#586576',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
