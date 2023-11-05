@@ -1,20 +1,76 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
+import Start from './screens/start';
+import EuclideanAlgorithm from './screens/euclid';
+import ExtendedEuclideanAlgorithm from './screens/extendedEuclid';
+import ChineseRemainderTheorem from './screens/crt';
+
+const Stack = createStackNavigator();
+
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Start">
+        <Stack.Screen
+          name="Start"
+          component={Start}
+          options={{
+            title: 'Willkommen bei Krypto Learn',
+            headerStyle: {
+              backgroundColor: '#4C5866',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="EuclideanAlgorithm"
+          component={EuclideanAlgorithm}
+          options={{
+            title: 'Euklidischer Algorithmus',
+            headerStyle: {
+              backgroundColor: '#4C5866',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="ExtendedEuclideanAlgorithm"
+          component={ExtendedEuclideanAlgorithm}
+          options={{
+            title: 'Erweiterter Euklidischer Algorithmus',
+            headerStyle: {
+              backgroundColor: '#4C5866',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+        <Stack.Screen
+          name="ChineseRemainderTheorem"
+          component={ChineseRemainderTheorem}
+          options={{
+            title: 'Chinesischer Restsatz',
+            headerStyle: {
+              backgroundColor: '#4C5866',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+              fontWeight: 'bold',
+            },
+          }}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
