@@ -1,5 +1,7 @@
 # Krypto Learn
 
+<img src="kryptolearn/assets/icon.png" alt="drawing" width="50"/>
+
 *Learn and understand basic concepts of cryptography with Krypto Learn!*
 
 ## About Krypto Learn
