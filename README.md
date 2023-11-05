@@ -20,7 +20,11 @@ The app is built using React Native on Expo, below are the tasks ahead.
   - [ ] Diffie-Hellman
   - [ ] RSA
   - [ ] ElGamal
-- [ ] Expo GitHub Actions Trigger
+- [ ] Env and build
+  - [ ] Expo GitHub Actions Trigger
+  - [ ] Configure devcontainer
+    - [x] add devcontainer config
+    - [ ] run automated `eas login`
 - [ ] UI Design/Improvements
     - [ ] App Icon Design
     - [ ] Common colors
