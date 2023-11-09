@@ -28,7 +28,7 @@ const ChineseRemainderTheorem = () => {
   return (
     <SafeAreaView style={styles.container}>
       <SafeAreaView style={styles.containerr}>
-        <Text>
+        <Text style={styles.description}>
           Chinesischer Restsatz als Lösungsverfahren bei gleichzeitiger
           Kongruenz. Gib mehrere durch Komma getrennte Module und die
           zugehörigen Reste ein, um die unbekannte Summe zu berechnen.
@@ -70,6 +70,9 @@ const styles = StyleSheet.create({
   containerr: {
     flex: 1,
     //flexDirection: 'row',
+  },
+  description: {
+    padding: 10,
   },
   input: {
     flex: 1,
