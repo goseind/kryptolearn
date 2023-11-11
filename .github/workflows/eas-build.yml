@@ -26,6 +26,8 @@ jobs:
         with:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
+      - name: ls
+        run: ls
       - name: Install dependencies
         run: npm ci
       - name: Build on EAS
