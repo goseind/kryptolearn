@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: kryptolearn
+        working-directory: ./kryptolearn
     steps:
+      - uses: actions/checkout@v3
       - name: ls
         run: ls
-      - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 18.x
