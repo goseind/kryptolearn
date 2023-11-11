@@ -1,12 +1,14 @@
 name: EAS Build
 on:
   workflow_dispatch:
-  pull_request:
-    types:
-      - opened
+  pull_request_target:
+    paths:
+      - 'kryptolearn/**'
   push:
     branches:
       - main
+    paths:
+      - 'kryptolearn/**'
 
 jobs:
   build:

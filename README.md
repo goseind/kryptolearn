@@ -1,3 +1,5 @@
+[![EAS Build](https://github.com/goseind/kryptolearn/actions/workflows/eas-build.yml/badge.svg)](https://github.com/goseind/kryptolearn/actions/workflows/eas-build.yml) [![EAS Submit](https://github.com/goseind/kryptolearn/actions/workflows/eas-submit.yml/badge.svg)](https://github.com/goseind/kryptolearn/actions/workflows/eas-submit.yml)
+
 # Krypto Learn
 
 <img src="kryptolearn/assets/icon.png" alt="drawing" width="50"/>
@@ -33,7 +35,12 @@ The app is built using React Native on Expo, below are the tasks ahead.
     - [ ] Common buttons
 - [ ] Additonal Content (Texts, etc.)
 - [ ] Release: https://docs.expo.dev/submit/android/
-  - [ ] Google Play Store Dev Account
+  - [x] Google Play Store Dev Account
   - [x] Google Cloud Project and SVC Account incl. JSON secret: https://github.com/expo/fyi/blob/main/creating-google-service-account.md
-  - [ ] Google internal test release with manual build APK: https://github.com/expo/fyi/blob/main/first-android-submission.md (pending account verificaion)
-  - [ ] Configure automatic eas submit and publish to play store
+  - [x] Google internal test release with manual build APK: https://github.com/expo/fyi/blob/main/first-android-submission.md (pending account verificaion)
+  - [x] Configure automatic eas submit and publish to play store
+  - [ ] Rlease app to Play Store
+
+Other stuff:
+- renew google svc cred
+- implement robot user in config
