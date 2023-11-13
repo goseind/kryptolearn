@@ -5,6 +5,7 @@ import {
   TextInput,
   Text,
   ScrollView,
+  Pressable,
 } from 'react-native';
 import { extendedEuclid } from '../algorithms';
 

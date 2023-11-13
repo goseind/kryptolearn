@@ -5,6 +5,7 @@ import {
   TextInput,
   Text,
   ScrollView,
+  Pressable,
 } from 'react-native';
 import { crt } from '../algorithms';
 
@@ -25,23 +26,23 @@ const ChineseRemainderTheorem = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-        <Text style={styles.description}>
-          Chinesischer Restsatz als Lösungsverfahren bei gleichzeitiger
-          Kongruenz. Gib mehrere durch Komma getrennte Module und die
-          zugehörigen Reste ein, um die unbekannte Summe zu berechnen.
-        </Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={setM}
-          placeholder="Nenne die Module m1, m2, .., mn (kommagetrennt)"
-          keyboardType="numeric"
-        />
-        <TextInput
-          style={styles.input}
-          onChangeText={setA}
-          placeholder="Nenne die Reste a1, a2, .., an (kommagetrennt)"
-          keyboardType="numeric"
-        />
+      <Text style={styles.description}>
+        Chinesischer Restsatz als Lösungsverfahren bei gleichzeitiger Kongruenz.
+        Gib mehrere durch Komma getrennte Module und die zugehörigen Reste ein,
+        um die unbekannte Summe zu berechnen.
+      </Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={setM}
+        placeholder="Nenne die Module m1, m2, .., mn (kommagetrennt)"
+        keyboardType="numeric"
+      />
+      <TextInput
+        style={styles.input}
+        onChangeText={setA}
+        placeholder="Nenne die Reste a1, a2, .., an (kommagetrennt)"
+        keyboardType="numeric"
+      />
 
       <Pressable style={styles.button} onPress={handleClick}>
         <Text style={styles.buttontext}>{'Berechne die Summe'}</Text>
