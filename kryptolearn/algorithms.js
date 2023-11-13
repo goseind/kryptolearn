@@ -17,6 +17,8 @@ export function extendedEuclid(a, b) {
   let i = 1;
 
   // algorithm variables
+  let x;
+  let y;
   let xs = [1, 0];
   let ys = [0, 1];
   let sign = 1; // relevant for minus 1
@@ -47,7 +49,8 @@ export function precrt(m) {
   let bigM = [];
   bigM[0] = 1;
   let y = [];
-
+  let ee;
+  
   for (let i = 0; i < m.length; i++) {
     bigM[0] = bigM[0] * m[i];
     console.log(`BigM ${bigM}`);
