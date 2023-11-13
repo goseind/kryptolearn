@@ -3,10 +3,9 @@ import {
   SafeAreaView,
   StyleSheet,
   TextInput,
-  Button,
   Text,
   ScrollView,
-  StatusBar,
+  Pressable,
 } from 'react-native';
 import { extendedEuclid } from '../algorithms';
 
@@ -24,7 +23,7 @@ const ExtendedEuclideanAlgorithm = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>
+      <Text style={styles.description}>
         Der erweiterte euklidische Algorithmus kann zwei Zahlen x und y
         berechnen, sodass ggt(a, b) = ax + by. Gib zwei natürliche Zahlen ein
         und drücke auf berechnen, um dir die Schritte des Algorithmus zeigen zu
@@ -42,10 +41,11 @@ const ExtendedEuclideanAlgorithm = () => {
         placeholder="Nenne eine Zahl b"
         keyboardType="numeric"
       />
-      <Button
-        onPress={handleClick}
-        title="Berechne Zahlen x und y zu a und b"
-      />
+
+      <Pressable style={styles.button} onPress={handleClick}>
+        <Text style={styles.buttontext}>{'Berechne Zahlen x und y zu a und b'}</Text>
+      </Pressable>
+
       <ScrollView>
         <Text style={styles.output}>Schritte:</Text>
         {steps.map((step, index) => (
@@ -65,6 +65,25 @@ const ExtendedEuclideanAlgorithm = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 7,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'royalblue',
+    margin: 3,
+  },
+  buttontext: {
+    fontSize: 12,
+    lineHeight: 21,
+    letterSpacing: 0.25,
+    color: 'white',
+  },
+  description: {
+    padding: 10,
   },
   input: {
     height: 40,

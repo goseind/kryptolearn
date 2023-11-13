@@ -3,10 +3,9 @@ import {
   SafeAreaView,
   StyleSheet,
   TextInput,
-  Button,
   Text,
   ScrollView,
-  StatusBar,
+  Pressable,
 } from 'react-native';
 import { crt } from '../algorithms';
 
@@ -27,27 +26,28 @@ const ChineseRemainderTheorem = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <SafeAreaView style={styles.containerr}>
-        <Text style={styles.description}>
-          Chinesischer Restsatz als Lösungsverfahren bei gleichzeitiger
-          Kongruenz. Gib mehrere durch Komma getrennte Module und die
-          zugehörigen Reste ein, um die unbekannte Summe zu berechnen.
-        </Text>
-        <TextInput
-          style={styles.input}
-          onChangeText={setM}
-          placeholder="Nenne die Module m1, m2, .., mn (kommagetrennt)"
-          keyboardType="numeric"
-        />
-        <TextInput
-          style={styles.input}
-          onChangeText={setA}
-          placeholder="Nenne die Reste a1, a2, .., an (kommagetrennt)"
-          keyboardType="numeric"
-        />
-      </SafeAreaView>
+      <Text style={styles.description}>
+        Chinesischer Restsatz als Lösungsverfahren bei gleichzeitiger Kongruenz.
+        Gib mehrere durch Komma getrennte Module und die zugehörigen Reste ein,
+        um die unbekannte Summe zu berechnen.
+      </Text>
+      <TextInput
+        style={styles.input}
+        onChangeText={setM}
+        placeholder="Nenne die Module m1, m2, .., mn (kommagetrennt)"
+        keyboardType="numeric"
+      />
+      <TextInput
+        style={styles.input}
+        onChangeText={setA}
+        placeholder="Nenne die Reste a1, a2, .., an (kommagetrennt)"
+        keyboardType="numeric"
+      />
 
-      <Button onPress={handleClick} title="Berechne die Summe" />
+      <Pressable style={styles.button} onPress={handleClick}>
+        <Text style={styles.buttontext}>{'Berechne die Summe'}</Text>
+      </Pressable>
+
       <ScrollView>
         <Text style={styles.output}>Schritte:</Text>
         {steps.map((step, index) => (
@@ -67,15 +67,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  containerr: {
-    flex: 1,
-    //flexDirection: 'row',
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 7,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'royalblue',
+    margin: 3,
+  },
+  buttontext: {
+    fontSize: 12,
+    lineHeight: 21,
+    letterSpacing: 0.25,
+    color: 'white',
   },
   description: {
     padding: 10,
   },
   input: {
-    flex: 1,
     height: 40,
     margin: 12,
     borderWidth: 1,

@@ -3,10 +3,9 @@ import {
   SafeAreaView,
   StyleSheet,
   TextInput,
-  Button,
   Text,
   ScrollView,
-  StatusBar,
+  Pressable,
 } from 'react-native';
 import { Euclid } from '../algorithms';
 
@@ -25,7 +24,7 @@ const EuclideanAlgorithm = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>
+      <Text style={styles.description}>
         Der euklidische Algorithmus dient zur Berechnung des größten gemeinsamen
         Teilers zweier natürlicher Zahlen und gilt als sehr effizient. Gib zwei
         natürliche Zahlen ein und drücke auf berechnen, um dir die Schritte des
@@ -43,7 +42,11 @@ const EuclideanAlgorithm = () => {
         placeholder="Nenne eine Zahl b"
         keyboardType="numeric"
       />
-      <Button onPress={handleClick} title="Berechne den ggT(a, b)" />
+
+      <Pressable style={styles.button} onPress={handleClick}>
+        <Text style={styles.buttontext}>{'Berechne den ggT(a, b)'}</Text>
+      </Pressable>
+
       <ScrollView>
         <Text style={styles.output}>Schritte:</Text>
         {steps.map((step, index) => (
@@ -60,6 +63,25 @@ const EuclideanAlgorithm = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  button: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 5,
+    paddingHorizontal: 7,
+    borderRadius: 4,
+    elevation: 3,
+    backgroundColor: 'royalblue',
+    margin: 3,
+  },
+  buttontext: {
+    fontSize: 12,
+    lineHeight: 21,
+    letterSpacing: 0.25,
+    color: 'white',
+  },
+  description: {
+    padding: 10,
   },
   input: {
     height: 40,
