@@ -1,4 +1,4 @@
-[![EAS Build](https://github.com/goseind/kryptolearn/actions/workflows/eas-build.yml/badge.svg)](https://github.com/goseind/kryptolearn/actions/workflows/eas-build.yml) [![EAS Submit](https://github.com/goseind/kryptolearn/actions/workflows/eas-submit.yml/badge.svg)](https://github.com/goseind/kryptolearn/actions/workflows/eas-submit.yml)
+[![EAS Build](https://github.com/goseind/kryptolearn/actions/workflows/eas-build.yml/badge.svg)](https://github.com/goseind/kryptolearn/actions/workflows/eas-build.yml) [![EAS Submit](https://github.com/goseind/kryptolearn/actions/workflows/eas-submit.yml/badge.svg)](https://github.com/goseind/kryptolearn/actions/workflows/eas-submit.yml) [![pages-build-deployment](https://github.com/goseind/kryptolearn/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/goseind/kryptolearn/actions/workflows/pages/pages-build-deployment)
 
 # Krypto Learn
 
