@@ -6,7 +6,6 @@ import {
   Button,
   Text,
   ScrollView,
-  StatusBar,
 } from 'react-native';
 import { extendedEuclid } from '../algorithms';
 
