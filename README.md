@@ -2,7 +2,7 @@
 
 # Krypto Learn
 
-<img src="kryptolearn/assets/icon.png" alt="drawing" width="50"/>
+<img src="https://github.com/goseind/kryptolearn/assets/87760323/b996d11a-b8c9-4552-89c2-d2d1317d67e3" alt="drawing" width="60"/> <a href='https://play.google.com/store/apps/details?id=com.dom325345.kryptolearn&pcampaignid=web_share&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img width="150" alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
 
 *Learn and understand basic concepts of cryptography with Krypto Learn!*
 
