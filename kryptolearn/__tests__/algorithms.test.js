@@ -11,7 +11,7 @@ test('calculate x = 371 and y = -25 for 456 and 6767', () => {
 });
 
 test('calcualte product of mods 2,3,5,7 to be 210, 105, 70, 42, 30', () => {
-    expect(precrt([2,3,5,7]).bigM).toEqual([20, 105, 70, 42, 30]);
+    expect(precrt([2,3,5,7]).bigM).toEqual([210, 105, 70, 42, 30]);
 });
 
 test('calculate crt of mods 2,3,5,7 and remainders 1,1,1,0 sum equal to 91', () => {
